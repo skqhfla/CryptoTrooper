@@ -54,8 +54,11 @@ Encrypt
 /cipher.sh &
 ```
 It will encrypt the data with AES-128-CBC with a randomly generated key and a random IV for each file
+
 Than it will use white-box to one-way encrypt this key and will generate key.enc and key.iv
+
 The victim now has to send both files to the attacker
+
 If you visit the local Website, you will notice the message
 ```bash
 firefox localhost &
@@ -78,6 +81,7 @@ Everything should get back to as it was
 ###Notes
 
 Encryption isn't just encoding, but mathematical encoding.
+
 White-box encryption isn't just obfuscation, but mathematical obfuscation.
 
 The only way to defeat evil is to become its master.
