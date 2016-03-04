@@ -38,18 +38,18 @@ Purposes :
 
 ##How to
 
-Prepare environment
+*Prepare environment*
 ```bash
 apt-get install apache2 nginx-common mysql-server postgresql
 ```
 
-Prepare ransomware
+*Prepare ransomware*
 ```bash
 cd /
 mv $CRYPTOTROOPER_SOURCE_DIRECTORY/* .
-```
 
-Encrypt
+
+*Encrypt*
 ```bash
 /cipher.sh &
 ```
@@ -64,14 +64,15 @@ If you visit the local Website, you will notice the message
 firefox localhost &
 ```
 
-After payment
+*After payment*
 ```bash
 mv key.enc key.iv $YOUR_DIRECTORY
 ./whiteDecipher.sh
 ```
 It will decrypt the victim's key that you may send to it
 
-Decrypt
+
+*Decrypt*
 ```bash
 mv key /
 /decipher.sh
@@ -80,11 +81,11 @@ Everything should get back to as it was
 
 ###Notes
 
-Encryption isn't just encoding, but mathematical encoding.
+Encryption isn't just encoding, but mathematical encoding
 
-White-box encryption isn't just obfuscation, but mathematical obfuscation.
+White-box encryption isn't just obfuscation, but mathematical obfuscation
 
-The only way to defeat evil is to become its master.
+The only way to defeat evil is to become its master
 
 > "Research is to see what everybody else has seen, and to think what nobody else has thought."
 
