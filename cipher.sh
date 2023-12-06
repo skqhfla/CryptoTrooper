@@ -10,7 +10,7 @@ for LOCATION in $(cat $LIST)
 do
 	for FILE in $(find $LOCATION -type f)
 	do
-		openssl aes-128-cbc -salt -pass file:"$KEY" -in "$FILE" -out "$FILE.enc" && cat /dev/null > "$FILE" && rm -rf "$FILE"
+ 		openssl enc -aes-128-cbc -pbkdf2 -iter 100000 -salt -pass file:"$KEY" -in "$FILE" -out "$FILE.enc" && cat /dev/null > "$FILE" && rm -rf "$FILE"
 	done
 done
 
